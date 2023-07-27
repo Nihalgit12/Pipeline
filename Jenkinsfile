@@ -7,11 +7,6 @@ pipeline {
                 sh 'docker build -t my-webapp:latest .'
             }
         }
-        stage('Test') {
-            steps {
-                // Run your tests here, if applicable
-            }
-        }
         stage('Deploy') {
             steps {
                 sh 'docker stop webapp-container || true' // Stop the existing container if it's running
